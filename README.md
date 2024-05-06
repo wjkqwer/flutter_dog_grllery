@@ -7,3 +7,4 @@
 ### 库
     - 流式布局      flutter_staggered_grid_view:    https://pub.dev/packages/flutter_staggered_grid_view
     - 数据持久化    shared_preferences:             https://pub.dev/packages/shared_preferences
+    - 网络访问      dio:                            https://pub-web.flutter-io.cn/packages/dio
