@@ -12,7 +12,7 @@ class BreedsScreen extends StatefulWidget {
   State<BreedsScreen> createState() => _BreedsScreenState();
 }
 
-class _BreedsScreenState extends State<BreedsScreen> {
+class _BreedsScreenState extends State<BreedsScreen> with AutomaticKeepAliveClientMixin{
   int _pageNumber = 1;
   int _pageSize = 10;
   final List<Breed> _breeds = [];
@@ -22,6 +22,9 @@ class _BreedsScreenState extends State<BreedsScreen> {
 
   //用于监听下拉加载更多
   final _scrollController = ScrollController();
+
+  @override
+  bool get wantKeepAlive => true;
 
   @override
   void initState() {

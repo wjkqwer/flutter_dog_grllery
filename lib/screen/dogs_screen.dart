@@ -11,7 +11,7 @@ class DogsScreen extends StatefulWidget {
   State<DogsScreen> createState() => _DogsScreenState();
 }
 
-class _DogsScreenState extends State<DogsScreen> {
+class _DogsScreenState extends State<DogsScreen> with AutomaticKeepAliveClientMixin{
   DogImageEntity? _currentImage;
 
   @override
@@ -19,6 +19,9 @@ class _DogsScreenState extends State<DogsScreen> {
     _requestOneImage();
     super.initState();
   }
+
+  @override
+  bool get wantKeepAlive => true;
 
   @override
   Widget build(BuildContext context) {

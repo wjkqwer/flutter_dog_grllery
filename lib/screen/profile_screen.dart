@@ -15,11 +15,14 @@ class ProfileScreen extends StatefulWidget {
 
 enum ProfileTab { favorites, likes }
 
-class _ProfileScreenState extends State<ProfileScreen> {
+class _ProfileScreenState extends State<ProfileScreen> with AutomaticKeepAliveClientMixin {
   ProfileTab _currentTab = ProfileTab.favorites;
   final List<DogImageEntity> _favoriteImages = [];
   final List<DogImageEntity> _likeImages = [];
   bool _isLogin = false;
+
+  @override
+  bool get wantKeepAlive => true;
 
   @override
   void initState() {
